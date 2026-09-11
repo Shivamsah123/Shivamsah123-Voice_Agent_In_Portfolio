@@ -3,7 +3,7 @@ import { Room, RoomEvent, Track } from 'livekit-client';
 import { Mic, PhoneOff, X, MessageSquare, Send } from 'lucide-react';
 import './VoiceAgent.css';
 
-const TOKEN_SERVER_URL = 'http://localhost:8000';
+const TOKEN_SERVER_URL = import.meta.env.VITE_TOKEN_SERVER_URL || 'http://localhost:8000';
 
 const VoiceAgent = () => {
   const [isOpen, setIsOpen] = useState(false);
