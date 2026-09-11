@@ -1,0 +1,16 @@
+﻿services:
+  - type: web
+    name: kaira-token-server
+    runtime: python
+    rootDir: voice_assist
+    buildCommand: pip install uv && uv sync --locked
+    startCommand: uv run uvicorn src.token_server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true

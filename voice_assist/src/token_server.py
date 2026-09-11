@@ -7,13 +7,20 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from livekit import api
 
+# Load .env.local first (local dev), then .env (fallback)
+# On Render/production, env vars are injected directly — dotenv is a no-op
 load_dotenv(Path(__file__).resolve().parents[1] / ".env.local")
+load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=False)
 
 app = FastAPI()
 
+# CORS: allow all origins (portfolio on Vercel, localhost dev)
+# For tighter security, replace "*" with your Vercel URL after deploy
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
