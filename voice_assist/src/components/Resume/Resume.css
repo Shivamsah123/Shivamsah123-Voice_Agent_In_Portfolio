@@ -1,0 +1,24 @@
+.resume {
+  background-color: var(--bg-color-alt);
+  text-align: center;
+}
+
+.resume-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.resume-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.resume-btn {
+  display: inline-flex;
+  justify-content: center;
+}

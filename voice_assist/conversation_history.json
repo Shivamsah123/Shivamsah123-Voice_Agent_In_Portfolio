@@ -1,0 +1,32 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, my name is Kaira. I can help you with weather information in text chat. How can I help you today?",
+    "timestamp": "2026-09-09 13:03:17"
+  },
+  {
+    "role": "user",
+    "text": "hii",
+    "timestamp": "2026-09-09 13:03:18"
+  },
+  {
+    "role": "assistant",
+    "text": "Hello! How can I help you with the weather today?",
+    "timestamp": "2026-09-09 13:03:21"
+  },
+  {
+    "role": "user",
+    "text": "mumbai",
+    "timestamp": "2026-09-09 13:04:09"
+  },
+  {
+    "role": "assistant",
+    "text": "The current weather in Mumbai is 29.3°C with 71% humidity and wind speeds of 12.7 km/h.",
+    "timestamp": "2026-09-09 13:04:13"
+  },
+  {
+    "role": "assistant",
+    "text": "Our two-minute conversation limit has been reached. Thank you for chatting with me. Goodbye!",
+    "timestamp": "2026-09-09 13:05:16"
+  }
+]
