@@ -84,7 +84,5 @@ WORKDIR /app
 # This improves security by not running as root
 USER appuser
 
-# Run the AgentServer using UV
-# UV will activate the virtual environment and run the agent.
-# The "start" command tells the AgentServer to connect to LiveKit and begin waiting for jobs.
-CMD ["uv", "run", "src/agent.py", "start"]
+# Run both Voice Agent (agent2.py) and Text Agent (agent3.py) using the supervisor runner
+CMD ["uv", "run", "src/runner.py"]
